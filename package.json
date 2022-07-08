@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.2"
+  },
+  "name": "minor-project-backend",
+  "version": "1.0.0",
+  "description": "Minor project (todo list app)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bhavneet Singh",
+  "license": "ISC"
+}
