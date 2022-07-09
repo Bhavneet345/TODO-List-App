@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/3219be7a00.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div id="task-information">
+            <h1 id="app-heading">
+                TODO App
+            </h1>
+            <form class="task-form" method="post" action="/add-task">
+                <div id="description">
+                    <p> Description </p>
+                    <textarea name="taskName" placeholder="What do you need to do?" id="form-description" required></textarea>
+                </div>
+
+                <div id="category">
+                    <p>Category</p>
+                    <input name="category" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." required>
+                    <datalist id="datalistOptions">
+                        <option value="Personal">
+                        <option value="Work">
+                        <option value="School">
+                        <option value="Cleaning">
+                        <option value="Other">
+                    </datalist>
+                </div>
+
+                <div id="deadline">
+                    <p>Deadline</p>
+                    <input type="date" id="due-date" name="deadline" required>
+                </div>
+
+                <div id="line-divider"></div>
+
+                <div id="submit-buttons">
+                    <button type="submit" id="add">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>ADD TASK</span>
+                    </button>
+                    <!-- <button type="submit" id="delete">Delete Task</button> -->
+                </div>
+
+            </form>
+
+            <div class="task-list">
+                <ul id="list">
+
+                    <% for(let i of tasklist){ %>
+                        <li id="task-list-item"> 
+
+                            <input type="checkbox" id="task-id">
+                            <label for="task-id"> <%= i.taskName %> </label>
+                            
+                            <div id="task-item-deadline-container">
+                                <i class="fa-solid fa-calendar-days calender"></i>
+                                <p id="task-item-deadline"> <%= i.deadline %> </p>
+                            </div>
+    
+                            <div id="task-item-category-container">
+                                <p id="task-item-category"> <%= i.category %> </p>
+                            </div>
+
+                            <a href="/delete-task/?id=<%= i._id %>">
+                                <div id="delete-button">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    <span>DELETE</span>
+                                </div>
+                            </a>
+    
+                        </li>
+                   <% } %> 
+
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
