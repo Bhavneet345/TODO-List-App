@@ -1,0 +1,226 @@
+body{
+    background-color: gray;
+}
+
+#app-heading{
+    text-align: center;
+}
+
+#task-information{
+    position: relative;
+    border: 2px solid transparent;
+    width: 55%;
+    left: 22%;
+    margin-top: 3%;
+    background-color: white;
+}
+
+/* TASK DESCRIPTION BOX STYLING */
+#task-information .task-form{
+    position: relative;
+    border: 2px solid transparent;
+    height: 400px;
+}
+
+#task-information #description{
+    border-bottom: 2px solid lightgray;
+    height: 100px;
+    padding-left: 3%;
+    position: relative;
+    border-top:  2px solid lightgray;
+}
+
+#task-information #description p{
+    color: gray;
+    position: relative;
+    margin-top: 0%;
+    left: 0.5%;
+    font-weight: bold
+}
+
+#task-information #description textarea{
+    margin-top: -2%;
+    height: 60px;
+    width: 80%;
+    padding: 0.7%;
+}
+
+#task-information #description textarea{
+    outline: none;
+    border: none;
+}
+
+#task-information #description textarea::placeholder{
+    color: lightgray;
+}
+
+/* TASK CATEGORY STYLING */
+#task-information #category{
+    display: inline-block;
+    border-right: 2px solid lightgray;
+    margin-top: 0%;
+    width: 48%;
+    margin-left: 2%;
+    height: 98px;
+}
+
+#task-information #category p{
+    color: gray;
+    position: relative;
+    margin-top: 0%;
+    left: 2%;
+    font-weight: bold
+}
+
+#task-information #category input{
+    border: 2px solid transparent;
+    margin-top: -2%;
+    width: 95%;
+}
+
+/* TASK DEADLINE STYLING */
+#task-information #deadline p{
+    color: gray;
+    position: relative;
+    left: 2%;
+    font-weight: bold
+}
+
+#task-information #deadline{
+    border: 2px solid transparent;
+    position: relative;
+    left: 1%;
+    top: 1%;
+    margin-top: -1%;
+    display: inline-block;
+    width: 45%;
+    color: lightgray;
+}
+
+#task-information #deadline input{
+    margin-left: 2%;
+    width: 50%;
+}
+
+#line-divider{
+    height: 0%;
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+/* TASK SUBMIT BUTTONS STYLING */
+#task-information #submit-buttons{
+    position: relative;
+    top: 5%;
+    border: 2px solid transparent;
+    height: 100px;
+    text-align: center;
+}
+
+#task-information #submit-buttons #add{
+    position: relative;
+    top: 30%;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+    font-size: larger;
+
+}
+
+/* TASK LIST STYLING */
+.task-list{
+    border: 2px solid transparent;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -10%;
+}
+
+.task-list ul{
+    list-style: none;
+}
+
+#task-list-item{
+    margin-top: 2%;
+    border: 2px solid transparent;
+    height: 75px;
+    position: relative;
+    left: -2%;
+    border-top: 2px solid lightgray;
+}
+
+#task-list-item label{
+    position: relative;
+    border: 2px solid transparent;
+    left:1.5%;
+    /* display: inline-block; */
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#task-list-item input{ 
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+#task-list-item input:checked + label {
+    text-decoration: line-through;
+}
+
+/* TASK ITEM DEADLINE STYLING */
+#task-list-item #task-item-deadline-container{
+    position: relative;
+    border: 2px solid transparent;
+    width: 180px;
+    height: 30px;
+    left: 5%;
+    color: gray;
+    top: -5%;
+}
+
+#task-list-item .calender{
+    font-size: large;
+}
+
+#task-list-item #task-item-deadline{
+    display: inline-block;
+    margin-left: 3%;
+    font-size: large;
+}
+
+/* TASK ITEM CATEGORY STYLING */
+#task-list-item #task-item-category-container{
+    border: 2px solid transparent;
+    width: 15%;
+    height: 35%;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    text-align: center;
+    color: white;
+    background-color: purple;
+}
+
+#task-list-item #task-item-category{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#task-list-item #task-item-category-container:hover{
+    background-color: darkblue;
+}
+
+/* TASK ITEM DELETE BUTTON STYLING */
+
+#task-list-item a #delete-button{
+    border: 2px solid transparent;
+    width: 15%;
+    height: 35%;
+    position: absolute;
+    top: 35%;
+    left: 80%; 
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background-color: red;
+}
